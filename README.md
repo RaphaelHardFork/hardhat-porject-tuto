@@ -31,7 +31,7 @@ yarn add @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ether
 ```
 - ajouter l'import de Waffle dans `hardhat.config.js`
 ```
-import '@nomiclabs/hardhat-waffle'
+require('@nomiclabs/hardhat-waffle')
 ```
 - ajouter les dev dépendances
 ```
