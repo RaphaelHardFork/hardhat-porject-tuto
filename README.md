@@ -40,7 +40,7 @@ yarn add prettier prettier-plugin-solidity solhint eslint eslint-config-standard
 - configurer les fichiers de parametrages : 
   - .prettierrc
 ```js
-  {
+{
   "overrides": [
     {
       "files": "*.sol",
@@ -58,7 +58,7 @@ yarn add prettier prettier-plugin-solidity solhint eslint eslint-config-standard
       "options": {
         "tabWidth": 2,
         "useTabs": false,
-        "semi": true,
+        "semi": false,
         "singleQuote": true,
         "arrowParens": "always",
         "bracketSpacing": true
@@ -114,7 +114,6 @@ yarn add prettier prettier-plugin-solidity solhint eslint eslint-config-standard
     "object-curly-spacing": ["error", "always"],
     "prefer-const": "error",
     "quotes": ["error", "single"],
-    "semi": ["error", "always"],
     "space-before-function-paren": ["error", "always"],
 
     "mocha-no-only/mocha-no-only": ["error"],
