@@ -25,6 +25,10 @@ artifacts
 ```zsh
 yarn add @openzeppelin/contracts
 ```
+
+```js
+import "@openzeppelin/contracts/utils/Address.sol";
+```
 - ajouter les autres dépendances
 ```zsh
 yarn add @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers --dev
@@ -140,8 +144,12 @@ yarn add prettier prettier-plugin-solidity solhint eslint eslint-config-standard
     "func-visibility": ["error", { "ignoreConstructors": true }]
   }
 }
-```
-- editorconfig
+```  
+Puis l'ajouter dans le _hardhat.config.js_ : 
+```js
+require('@nomiclabs/hardhat-solhint')
+```  
+- editor.config
 ```js
 # EditorConfig is awesome: https://EditorConfig.org
 
@@ -164,6 +172,24 @@ indent_size = 2
 
 [*.adoc]
 max_line_length = 0
+```
+
+- installer docgen :  
+```zsh
+yarn add --dev hardhat-docgen
+```  
+Puis dans _hardhat.config.js_ : 
+```js
+require('hardhat-docgen')
+{...}
+module.exports = {
+  solidity: '0.8.4',
+  docgen: {
+    path: './docs',
+    clear: true,
+    runOnCompile: true,
+  },
+}
 ```
 
 ## Compiler un contrat
